@@ -20,14 +20,22 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404;
-  /* url("../img/bg.jpg") top right no-repeat; */
+  background: #040404; 
   background-size: cover;
   left: 0;
   right: 0;
   top: 0;
   height: 100vh;
   z-index: -1;
+}
+
+.image_card img{
+  width: 250px;
+  height: 250px;
+  border-radius: 150px;
+  border-style: hidden;
+  margin-top: 20px;
+  object-fit: cover;
 }
 
 @media (min-width: 1024px) {
@@ -61,12 +69,13 @@ h6 {
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
-  height: 100vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
 }
+
 
 #header * {
   transition: ease-in-out 0.3s;
@@ -106,7 +115,6 @@ h6 {
 }
 
 #header .social-links {
-  margin-top: 40px;
   display: flex;
 }
 
@@ -120,8 +128,8 @@ h6 {
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 #header .social-links a:hover {
@@ -406,6 +414,7 @@ section .container {
   color: #fff;
 }
 
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -529,6 +538,19 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   transition: ease-in-out 0.3s;
 }
+
+.icon-size{
+  width: 40px;
+  height: 40px;
+  margin: 0%;
+  padding-right: 8px;
+}
+
+.img-box{
+  width: 800px;
+  height: 463px;
+}
+
 
 .interests .icon-box i {
   font-size: 32px;
@@ -933,7 +955,7 @@ section .container {
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  padding-top: 40px;
+  padding-top: 90px;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   left: 0;
@@ -1006,15 +1028,15 @@ section .container {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
-  padding: 20px;
-  width: 100%;
+  padding: 14px;
+  width: 80%;
   background: rgba(255, 255, 255, 0.08);
 }
 
 .contact .info-box i.bx {
   font-size: 24px;
   color: #18d26e;
-  border-radius: 50%;
+  border-radius: 80%;
   padding: 14px;
   float: left;
   background: rgba(255, 255, 255, 0.1);
