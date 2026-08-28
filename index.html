@@ -2,277 +2,629 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Porfolio Site</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haris Ali — Backend & ML Engineer</title>
+  <meta name="description" content="Portfolio of Syed Muhammad Haris Ali — Backend Developer & Machine Learning Engineer based in Pakistan.">
+  <meta name="keywords" content="Haris Ali, Backend Developer, Machine Learning Engineer, Python, Django, AI, Portfolio">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <header id="header" class="header-top">
-        <div class="container">
-          <h1><a href="index.html">Syed Muhammad Haris Ali</a></h1>
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link" href="index.html">Home</a></li>
-              <li><a class="nav-link" href="#resume">Resume</a></li>
-              <li><a class="nav-link" href="#projects">Projects</a></li>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">HA<span class="accent-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#work" class="mobile-link">Work</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#posts" class="mobile-link">Posts</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">👋 Hello World, I'm</p>
+      <h1 class="hero-name">Syed Muhammad<br><span class="gradient-text">Haris Ali</span></h1>
+      <p class="hero-subtitle">
+        <span class="typed-prefix">I build </span><span id="typed-text" class="typed-word"></span><span class="typed-cursor">|</span>
+      </p>
+      <p class="hero-description">
+        Backend developer & ML engineer crafting scalable systems and intelligent applications.
+        Turning complex problems into elegant, production-ready solutions.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="https://github.com/Haris-Ali007" target="_blank" class="btn-secondary">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/haris-ali-engineer/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Haris-Ali007" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://medium.com/@aliharris727" target="_blank" title="Medium"><i class="bi bi-medium"></i></a>
+        <a href="mailto:aliharris727@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 01. about_me</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h3>Backend Developer &amp; <span class="gradient-text">Machine Learning Engineer</span></h3>
+          <p>
+            I'm a software engineer with a passion for building quality backend systems that power scalable applications.
+            My core expertise lies in designing and deploying machine learning pipelines and serving them efficiently
+            through robust REST APIs.
+          </p>
+          <p>
+            I love diving deep into the internals of software technologies — understanding what makes systems fast,
+            reliable, and intelligent. From classification models at scale to computer vision pipelines, I bridge
+            the gap between research and production.
+          </p>
+          <p>
+            When I'm not writing code, I'm exploring the unseen realms of the universe in my dreams.
+          </p>
+          <div class="about-cta-row">
+            <a href="mailto:aliharris727@gmail.com" class="btn-primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 02. tech_stack</span>
+        <h2>Skills &amp; Technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h4><i class="bi bi-server"></i> Backend Development</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Flask</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">Celery</span>
+            <span class="tag">RabbitMQ</span>
+            <span class="tag">Microservices</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h4><i class="bi bi-cpu"></i> Machine Learning &amp; AI</h4>
+          <div class="skill-tags">
+            <span class="tag tag-ml">PyTorch</span>
+            <span class="tag tag-ml">TensorFlow</span>
+            <span class="tag tag-ml">Hugging Face</span>
+            <span class="tag tag-ml">Scikit-learn</span>
+            <span class="tag tag-ml">NLP</span>
+            <span class="tag tag-ml">Computer Vision</span>
+            <span class="tag tag-ml">LoRA Fine-tuning</span>
+            <span class="tag tag-ml">Knowledge Distillation</span>
+            <span class="tag tag-ml">Data Augmentation</span>
+            <span class="tag tag-ml">GANs</span>
+            <span class="tag tag-ml">Stable Diffusion</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h4><i class="bi bi-stars"></i> GenAI &amp; LLM Engineering</h4>
+          <div class="skill-tags">
+            <span class="tag tag-genai">LangChain</span>
+            <span class="tag tag-genai">LangGraph</span>
+            <span class="tag tag-genai">RAG</span>
+            <span class="tag tag-genai">Agentic Workflows</span>
+            <span class="tag tag-genai">Semantic Search</span>
+            <span class="tag tag-genai">Embeddings</span>
+            <span class="tag tag-genai">Reranking</span>
+            <span class="tag tag-genai">Prompt Engineering</span>
+            <span class="tag tag-genai">Hallucination Mitigation</span>
+            <span class="tag tag-genai">Eval Pipelines</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h4><i class="bi bi-tools"></i> Tools &amp; Infrastructure</h4>
+          <div class="skill-tags">
+            <span class="tag tag-tools">Docker</span>
+            <span class="tag tag-tools">Linux</span>
+            <span class="tag tag-tools">Gradio</span>
+            <span class="tag tag-tools">OpenCV</span>
+            <span class="tag tag-tools">NumPy</span>
+            <span class="tag tag-tools">Pandas</span>
+            <span class="tag tag-tools">Jupyter</span>
+            <span class="tag tag-tools">AWS</span>
+            <span class="tag tag-tools">GCP</span>
+            <span class="tag tag-tools">CI/CD</span>
+            <span class="tag tag-tools">Chroma</span>
+            <span class="tag tag-tools">Milvus</span>
+            <span class="tag tag-tools">Selenium</span>
+            <span class="tag tag-tools">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 03. work_experience</span>
+        <h2>Experience &amp; Education</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h4>Mid-Senior AI Engineer</h4>
+                <p class="timeline-company"><i class="bi bi-building"></i> Zoneomics — Remote</p>
+                <a href="https://zoneomics.com" target="_blank" class="company-site-link"><i class="bi bi-globe"></i> zoneomics.com</a>
+              </div>
+              <span class="timeline-date">May 2025 – Present</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Built and shipped production RAG agents combining embedding-based semantic search over vector stores with reranking and context-selection pipelines, delivering grounded, source-attributable responses at scale.</li>
+              <li>Architected LangGraph agentic workflows with multi-step reasoning, tool invocation, and conditional branching for retrieval scenarios single-shot RAG couldn't handle reliably.</li>
+              <li>Engineered an end-to-end ingestion pipeline — extraction, cleaning, and structuring of heterogeneous sources — for downstream RAG consumption.</li>
+              <li>Designed a cloud-based async system on Celery and RabbitMQ orchestrating distributed scraping workloads, and served NLP inference models over async REST APIs.</li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-        </div>
-      </header>
-    
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about section-show">
-
-    <div class="about-me container">
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-8 content" data-aos="fade-left">
-          <h3>Backend developer | Machine learning engineer </h3>
-            <p>
-            I am a software engineer who is more focused on building quality backend for your scalable application.<br>
-            My major experiences lies in building machine learning applications and serving them in a scalable manner 
-            through Rest Apis.
-            I enjoy learning about in-depth details of software technologies that led to the development of revolutionary
-            tools used by millions.
-            </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container resume">
-      <div class="section-title">
-        <h2>Posts</h2>
-      </div>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h5><a style="color: lightskyblue" 
-              href="https://medium.com/@aliharris727/the-pixel-alchemy-of-stable-diffusion-d2db27e64035" target="_blank">
-              The Pixel Alchemy of Stable Diffusion</a>
-            </h5>
-            <p>
-              Deep Dive into modern image generation with Stable diffusion....
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h5><a style="color: lightskyblue" 
-              href="https://medium.com/@aliharris727/augmentation-of-generative-ai-and-human-intelligence-a-partnership-of-the-future-fccda8f23518" 
-              target="_blank">Augmentation of Generative AI and Human Intelligence: A Partnership of the Future
-            </a></h5>
-            <p>
-              Intelligence is a salient feature of a human mind. It is a profound human attribute, 
-              encompassing our remarkable capacity to comprehend and interact with our environment....
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact" class="contact container">
-      <div class="section-title">
-        <h2>Connect with me</h2>
-      </div>
-      <div class="row mt-2">
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/haris-ali-engineer/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              <a href="https://github.com/Haris-Ali007" target="_blank" class="github"><i class="bi bi-github"></i></a>        
-              <a href="https://www.instagram.com/smharisali_123/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="timeline-tags">
+              <span>LangGraph</span><span>RAG</span><span>Celery</span><span>RabbitMQ</span><span>Python</span>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>aliharris727@gmail.com</p>
-          </div>
-        </div>
-      </div>
-  </div>
-
-  </section>
-
-  <!-- ======= Projects  ======= -->
-  <section id="projects" class="portfolio resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>Projects</p>
-      </div>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h3>Youtube-rag</h3>
-            <p>
-              This project is a RAG pipeline built using langchain to answer questions from a youtube video.
-            </p>
-            <strong>Project URL</strong>: <a href="https://github.com/Haris-Ali007/youtube-rag" target="_blank">https://github.com/Haris-Ali007/youtube-rag</a>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h3>Image generation app</h3>
-            <p>
-              This is a simple image generation app built using gradio and hugging face diffusers for image generation using stable diffusion.
-              It allows user to easily adjust different parameters and test how generation results change for a model.
-            </p>
-            <strong>Project URL</strong>: <a href="https://github.com/Haris-Ali007/Image-generation-app" target="_blank">https://github.com/Haris-Ali007/Image-generation-app</a>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h3>Transformers from scratch</h3>
-            <p>
-              This is an implementation of famous transformer model in tensorflow and a complete tutorial for training the model on a dataset.
-            </p>
-            <strong>Project URL</strong>: <a href="https://github.com/Haris-Ali007/transformers-from-scratch" target="_blank">https://github.com/Haris-Ali007/transformers-from-scratch</a>
-          </div>
-        </div>        
-      </div>
-      <br>
-      <div class="resume-item">
-        <div class="row">
-          <div class="col-lg-7 portfolio-info">
-            <h3>Django CRM</h3>
-            <p>
-              This is a simple django CRM to handle customer data, product records and the purchases they made. 
-              The purpose of this project is to show how we can use python and implement web based CRM.
-            </p>
-            <strong>Project URL</strong>: <a href="https://github.com/Haris-Ali007/django-crm" target="_blank">https://github.com/Haris-Ali007/django-crm</a>
-          </div>
-        </div>        
-      </div>
-  </section>
-
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-      </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Bachelors of Computer Engineer</h4>
-            <h5>2017 - 2021</h5>
-            <p><em>University of Engineering and Technology, Taxila, Pakistan</em></p>
-            <p>Cumulative GPA: 3.89</p>
-          </div>
- 
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Machine learning engineer</h4>
-            <h5>7/2022 - Present</h5>
-            <p><em>Formulatrix - Lahore, PK </em></p>
-            <p>
-            <ul>
-              <li>Part of the MARCO team responsible for the research and development of improvements for their latest classification model. Provided an
-                improvement technique for their classification model resulting in an accuracy boost.</li>
-              <li>Part of the team responsible for development, integration and deployment of the latest inference flask-api for the premium users of
-                MARCO.</li>
-              <li>Built automation scripts for complete inference and results analysis of customers data.</li>
-              <li>Responsible for tracking and analysis of the data scoring teams performance. Build datasets, collect scoring stats, compute performance
-                metrics and discuss disagreements for further improvements</li>
-              <li>Responsible for maintenance and improvements of the data scoring platform.</li>
-              <li>Manage and improve the backend python django server for their in house developed sites and services.</li>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h4>Machine Learning Engineer</h4>
+                <p class="timeline-company"><i class="bi bi-building"></i> Formulatrix — Lahore, Pakistan</p>
+                <a href="https://formulatrix.com" target="_blank" class="company-site-link"><i class="bi bi-globe"></i> formulatrix.com</a>
+              </div>
+              <span class="timeline-date">Jul 2022 – Apr 2025</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Contributed to R&D improvements on the MARCO classification model, achieving a measurable accuracy boost through novel training techniques.</li>
+              <li>Developed, integrated, and deployed the latest Flask-based inference API serving premium users at scale.</li>
+              <li>Built automation scripts for end-to-end inference pipelines and comprehensive results analysis on customer data.</li>
+              <li>Led data scoring team performance tracking — building datasets, computing metrics, and leading disagreement reviews.</li>
+              <li>Maintained and enhanced the in-house Django backend powering internal tools and services.</li>
             </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">
-            <h4>Machine learning engineer</h4>
-            <h5>10/2021 - 7/2022</h5>
-            <p><em>Zoneomics - Lahore, PK</em></p>
-            <p>
-            <ul>
-              <li>Developed computer vision solutions for processing of land-use data. Worked on their existing land-use data processing plugin and
-                improved its accuracy of zone detection with the help of image processing and computer vision techniques. Integrated additional
-                post-processing methods introduced by their GIS team. Worked on a zone-name classification api to provide zone information data along
-                with its visual features. Improved the design of the plugin and added additional features to make it more user friendly</li>
-              <li>Researched on algorithm for extracting land-parcel information from street view data. Data extraction from different online sources.
-                Development of the first version of the land-parcel detection model.</li>
-              <li>Researched on GANs for generating synthetic images for further improvement of land-zones detection systems</li>
-            </ul>
-            </p>
-          </div>
-          
-          <div class="resume-item">
-            <h4>Research Intern</h4>
-            <h5>3/2021 - 6/2021</h5>
-            <p><em>Swarm Robotics Lab - NCRA, PK</em></p>
-            <p>
-            <ul>
-              <li>Worked on robot vision using SLAM. Assisted in running Collaborative Centralized Monocular SLAM (CCM SLAM) on a server client
-                network supported by Nano-pi to provide collaborative mapping for a swarm of robots</li>
-            </ul>
-            </p>
+            <div class="timeline-tags">
+              <span>Python</span><span>Django</span><span>Flask</span><span>ML</span><span>Computer Vision</span>
+            </div>
           </div>
         </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h4>Machine Learning Engineer</h4>
+                <p class="timeline-company"><i class="bi bi-building"></i> Zoneomics — Lahore, Pakistan</p>
+                <a href="https://zoneomics.com" target="_blank" class="company-site-link"><i class="bi bi-globe"></i> zoneomics.com</a>
+              </div>
+              <span class="timeline-date">Oct 2021 – Jul 2022</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Built computer vision solutions for land-use data processing, improving zone detection accuracy with advanced image processing techniques.</li>
+              <li>Developed a zone-name classification API delivering detailed zoning information paired with visual features.</li>
+              <li>Researched and prototyped land-parcel detection from street-view imagery; built the initial version of the detection model.</li>
+              <li>Explored GAN-based synthetic data generation to further enhance land-zone detection systems.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Computer Vision</span><span>OpenCV</span><span>GANs</span><span>GIS</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h4>Research Intern</h4>
+                <p class="timeline-company"><i class="bi bi-building"></i> Swarm Robotics Lab, NCRA — Pakistan</p>
+              </div>
+              <span class="timeline-date">Mar 2021 – Jun 2021</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Worked on robot vision using SLAM (Simultaneous Localization and Mapping) for collaborative mapping in swarm robotics.</li>
+              <li>Assisted in deploying CCM-SLAM on a server-client network (Nano-Pi) to enable multi-robot collaborative mapping.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>SLAM</span><span>Robotics</span><span>Computer Vision</span><span>Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker timeline-edu"></div>
+          <div class="timeline-card card-edu">
+            <div class="timeline-header">
+              <div>
+                <h4>MS Data Science</h4>
+                <p class="timeline-company"><i class="bi bi-mortarboard"></i> National University of Sciences and Technology, Islamabad</p>
+              </div>
+              <span class="timeline-date">2025 – 2027 (expected)</span>
+            </div>
+            <p class="edu-gpa">Current <strong>CGPA: 3.7 / 4.0</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker timeline-edu"></div>
+          <div class="timeline-card card-edu">
+            <div class="timeline-header">
+              <div>
+                <h4>B.E. Computer Engineering</h4>
+                <p class="timeline-company"><i class="bi bi-mortarboard"></i> University of Engineering &amp; Technology, Taxila</p>
+              </div>
+              <span class="timeline-date">2017 – 2021</span>
+            </div>
+            <p class="edu-gpa">Graduated with <strong>Cumulative GPA: 3.89 / 4.0</strong></p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
-  
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- PROFESSIONAL WORK -->
+  <section id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 04. professional_work</span>
+        <h2>Professional Work</h2>
+      </div>
+      <div class="work-grid">
 
-  <!-- Template Main JS File -->
+        <div class="work-card reveal">
+          <div class="work-card-header">
+            <div class="work-company">
+              <span class="work-role-badge">Mid-Senior AI Engineer</span>
+              <span class="work-company-name">Zoneomics</span>
+              <a href="https://zoneomics.com" target="_blank" class="work-company-link">
+                <i class="bi bi-globe"></i> zoneomics.com
+              </a>
+            </div>
+            <i class="bi bi-robot work-product-icon"></i>
+          </div>
+          <h4 class="work-project-name">Production RAG Agents &amp; Agentic Workflows</h4>
+          <p class="work-desc">
+            Built and shipped production RAG agents combining embedding-based semantic search over vector stores with
+            reranking and context-selection pipelines for grounded, source-attributable responses at scale. Architected
+            LangGraph agentic workflows with multi-step reasoning, tool invocation, and conditional branching, and
+            designed a cloud-based async system on Celery and RabbitMQ orchestrating distributed scraping workloads.
+          </p>
+          <div class="project-tags">
+            <span>LangGraph</span><span>RAG</span><span>Celery</span><span>RabbitMQ</span><span>Python</span>
+          </div>
+          <div class="work-links">
+            <a href="https://zoneomics.com" target="_blank" class="work-link-btn">
+              <i class="bi bi-globe"></i> Company Site
+            </a>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-card-header">
+            <div class="work-company">
+              <span class="work-role-badge">ML Engineer &amp; Backend Dev</span>
+              <span class="work-company-name">Formulatrix</span>
+              <a href="https://formulatrix.com" target="_blank" class="work-company-link">
+                <i class="bi bi-globe"></i> formulatrix.com
+              </a>
+            </div>
+            <i class="bi bi-microscope work-product-icon"></i>
+          </div>
+          <h4 class="work-project-name">MARCO — Crystallization Image Classifier &amp; Inference API</h4>
+          <p class="work-desc">
+            Contributed R&amp;D improvements to the MARCO deep learning model for protein crystallization image classification,
+            achieving measurable accuracy gains. Designed, built, and deployed a Flask-based inference API serving premium users
+            globally. Developed automation pipelines for end-to-end inference and results analysis on large customer datasets.
+            Maintained the internal Django backend powering company tools.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>Django</span><span>Deep Learning</span><span>Computer Vision</span>
+          </div>
+          <div class="work-links">
+            <a href="https://formulatrix.com/protein-crystallization-software/" target="_blank" class="work-link-btn primary">
+              <i class="bi bi-box-arrow-up-right"></i> View Product
+            </a>
+            <a href="https://formulatrix.com" target="_blank" class="work-link-btn">
+              <i class="bi bi-globe"></i> Company Site
+            </a>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-card-header">
+            <div class="work-company">
+              <span class="work-role-badge">ML Engineer</span>
+              <span class="work-company-name">Zoneomics</span>
+              <a href="https://zoneomics.com" target="_blank" class="work-company-link">
+                <i class="bi bi-globe"></i> zoneomics.com
+              </a>
+            </div>
+            <i class="bi bi-map work-product-icon"></i>
+          </div>
+          <h4 class="work-project-name">Land-Use Zone Detection &amp; Classification Platform</h4>
+          <p class="work-desc">
+            Built computer vision solutions for land-use data processing, improving zone detection accuracy with advanced
+            image processing techniques. Developed a zone-name classification API delivering detailed zoning information
+            paired with visual features. Prototyped land-parcel detection from street-view imagery and explored
+            GAN-based synthetic data generation for enhanced detection models.
+          </p>
+          <div class="project-tags">
+            <span>Computer Vision</span><span>OpenCV</span><span>GANs</span><span>GIS</span><span>Python</span>
+          </div>
+          <div class="work-links">
+            <a href="https://zoneomics.com" target="_blank" class="work-link-btn primary">
+              <i class="bi bi-box-arrow-up-right"></i> View Product
+            </a>
+            <a href="https://zoneomics.com" target="_blank" class="work-link-btn">
+              <i class="bi bi-globe"></i> Company Site
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 05. open_source_projects</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-lightning-charge-fill project-icon"></i>
+          </div>
+          <h3 class="project-title">Disaster-Response VLM</h3>
+          <p class="project-desc">
+            LoRA fine-tuning and knowledge distillation of the Moondream vision-language model, adapted for
+            disaster-response planning to interpret and reason over field imagery.
+          </p>
+          <div class="project-tags">
+            <span>LoRA</span><span>Knowledge Distillation</span><span>VLM</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-mortarboard-fill project-icon"></i>
+            <a href="https://github.com/harisbuilds/ScholarScout" target="_blank" class="project-link" title="View on GitHub"><i class="bi bi-github"></i></a>
+          </div>
+          <h3 class="project-title">ScholarScout</h3>
+          <p class="project-desc">
+            An AI agent that helps students discover scholarship and research opportunities. Built with LangGraph
+            for semantic query routing across a PostgreSQL metadata store and a Milvus vector index, with a
+            Tavily-powered fallback for live web search when fresh scholarship info is needed.
+          </p>
+          <div class="project-tags">
+            <span>LangGraph</span><span>Flask</span><span>Milvus</span><span>PostgreSQL</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-folder2-open project-icon"></i>
+            <a href="https://github.com/Haris-Ali007/youtube-rag" target="_blank" class="project-link" title="View on GitHub"><i class="bi bi-github"></i></a>
+          </div>
+          <h3 class="project-title">YouTube RAG Pipeline</h3>
+          <p class="project-desc">
+            An intelligent question-answering system built on a Retrieval-Augmented Generation (RAG) pipeline using LangChain.
+            Ask any question about a YouTube video and get accurate, context-aware answers powered by LLMs.
+          </p>
+          <div class="project-tags">
+            <span>LangChain</span><span>RAG</span><span>Python</span><span>LLM</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-folder2-open project-icon"></i>
+            <a href="https://github.com/Haris-Ali007/Image-generation-app" target="_blank" class="project-link" title="View on GitHub"><i class="bi bi-github"></i></a>
+          </div>
+          <h3 class="project-title">Image Generation App</h3>
+          <p class="project-desc">
+            A Gradio-powered web app for generating images using Stable Diffusion via Hugging Face Diffusers.
+            Exposes fine-grained model parameters (guidance scale, steps, seed) for experimentation.
+          </p>
+          <div class="project-tags">
+            <span>Stable Diffusion</span><span>Gradio</span><span>Hugging Face</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-folder2-open project-icon"></i>
+            <a href="https://github.com/Haris-Ali007/transformers-from-scratch" target="_blank" class="project-link" title="View on GitHub"><i class="bi bi-github"></i></a>
+          </div>
+          <h3 class="project-title">Transformers From Scratch</h3>
+          <p class="project-desc">
+            A ground-up TensorFlow implementation of the Transformer architecture, complete with a training tutorial
+            on a real dataset. Built to deeply understand attention mechanisms and model internals.
+          </p>
+          <div class="project-tags">
+            <span>TensorFlow</span><span>Transformers</span><span>NLP</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class="bi bi-folder2-open project-icon"></i>
+            <a href="https://github.com/Haris-Ali007/django-crm" target="_blank" class="project-link" title="View on GitHub"><i class="bi bi-github"></i></a>
+          </div>
+          <h3 class="project-title">Django CRM</h3>
+          <p class="project-desc">
+            A full-featured Customer Relationship Management system built with Django. Handles customer data,
+            product records, and purchase history — demonstrating clean Python web development practices.
+          </p>
+          <div class="project-tags">
+            <span>Django</span><span>Python</span><span>PostgreSQL</span><span>Web Dev</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <section id="posts">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 06. writing</span>
+        <h2>Articles &amp; Posts</h2>
+      </div>
+      <div class="posts-grid">
+
+        <a href="https://medium.com/@aliharris727/the-pixel-alchemy-of-stable-diffusion-d2db27e64035"
+           target="_blank" class="post-card reveal">
+          <div class="post-tag-line">
+            <span class="post-category">Deep Dive</span>
+            <span class="post-platform"><i class="bi bi-medium"></i> Medium</span>
+          </div>
+          <h3 class="post-title">The Pixel Alchemy of Stable Diffusion</h3>
+          <p class="post-excerpt">
+            An in-depth exploration of how Stable Diffusion works under the hood — from latent diffusion models
+            to the denoising process that conjures photorealistic images from noise.
+          </p>
+          <span class="post-read-more">Read Article <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+        <a href="https://medium.com/@aliharris727/augmentation-of-generative-ai-and-human-intelligence-a-partnership-of-the-future-fccda8f23518"
+           target="_blank" class="post-card reveal">
+          <div class="post-tag-line">
+            <span class="post-category">Opinion</span>
+            <span class="post-platform"><i class="bi bi-medium"></i> Medium</span>
+          </div>
+          <h3 class="post-title">Augmentation of Generative AI and Human Intelligence</h3>
+          <p class="post-excerpt">
+            A thoughtful examination of how Generative AI and human cognition can evolve as complementary forces
+            — and what a future human-AI partnership truly means for society.
+          </p>
+          <span class="post-read-more">Read Article <i class="bi bi-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 07. lets_connect</span>
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-wrapper reveal">
+        <div class="contact-message">
+          <h3>Let's build something great together.</h3>
+          <p>
+            Whether you have a project in mind, a role to discuss, or just want to chat about ML and backend systems —
+            my inbox is always open. I'll get back to you promptly!
+          </p>
+          <a href="mailto:aliharris727@gmail.com" class="btn-primary contact-email-btn">
+            <i class="bi bi-envelope-fill"></i> aliharris727@gmail.com
+          </a>
+        </div>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/haris-ali-engineer/" target="_blank" class="social-pill">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/Haris-Ali007" target="_blank" class="social-pill">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://medium.com/@aliharris727" target="_blank" class="social-pill">
+            <i class="bi bi-medium"></i> Medium
+          </a>
+          <a href="https://www.instagram.com/smharisali_123/" target="_blank" class="social-pill">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-name">Syed Muhammad Haris Ali</p>
+      <p class="footer-copy">Designed &amp; built with ❤️</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/haris-ali-engineer/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Haris-Ali007" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:aliharris727@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
